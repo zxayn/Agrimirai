@@ -1,0 +1,141 @@
+nav {
+    background-color: #5E8D92;
+}
+
+#contact {
+    padding-top: 6rem;
+}
+
+.hero {
+      background-image: url('img/contactusimg1.jpg'); /* Ganti dengan path gambar kamu */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+}
+
+.overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Overlay hitam transparan */
+      z-index: 1;
+}
+
+.hero-content {
+      position: relative;
+      z-index: 2;
+}
+
+.hero h1 {
+      font-size: 60px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      margin-bottom: 10px;
+}
+
+.hero p {
+      font-size: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.wave {
+      width: 100%;
+      margin: 20px auto;
+      height: 40px;
+}
+
+#faqu {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.contact-section {
+    padding: 50px;
+}
+
+.contact-box {
+    background-color: #003d33;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    margin-bottom: 15px;
+}
+
+.contact-box .btn {
+    background-color: #f4f4dc;
+    color: #003d33;
+    border: none;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #003d33;
+}
+
+.map-responsive {
+  position: relative;
+  padding-bottom: 40%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px; 
+  margin-top: 3rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+    .map-responsive {
+        width: auto;
+        height: auto;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+.footer {
+    background-color: #5E8D92;
+    color: white;
+    padding: 40px 0;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .social-icons i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+.footer .contact-info i {
+    margin-right: 8px;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
