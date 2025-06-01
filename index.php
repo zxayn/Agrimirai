@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Agrimirai | Home</title>
 
 <!-- font cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="shortcut icon" href="img/logo.png">
 
 <!-- style css  -->
 
@@ -336,7 +337,7 @@ header .fa-bars{
 }
 
 .footer .box-container .box h3{
-  color: #333;
+  color: var(--main-color);
   font-size: 2.5rem;
   padding: 3rem 0;
 }
@@ -512,9 +513,9 @@ header .fa-bars{
   </nav>
 
   <div class="icons">
-    <a href="#" class="fas fa-search"></a>
-    <a href="#" class="fas fa-user"></a>
-    <a href="#" class="fas fa-shopping-cart"></a>
+
+    <a href="contactus.php" class="fas fa-user"></a>
+    <a href="produk.php" class="fas fa-shopping-cart"></a>
 
   </div>
 
@@ -607,7 +608,7 @@ header .fa-bars{
         <img src="img/selada.png" alt="">
         <h3>Selada</h3>
         <p>Selada hidroponik adalah metode budidaya selada tanpa tanah, menggunakan media air yang kaya nutrisi.</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="login.php" class="btn">Buy Now</a>
       </div>
     </div>
 
@@ -616,7 +617,7 @@ header .fa-bars{
         <img src="img/tomato.png" alt="">
         <h3>Tomat</h3>
         <p>Tomat organik ditanam tanpa pestisida kimia, memberikan rasa segar dan sehat.</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="login.php" class="btn">Buy Now</a>
       </div>
     </div>
 
@@ -625,7 +626,7 @@ header .fa-bars{
           <img src="img/kubis.png" alt="">
           <h3>Kubis</h3>
             <p>Kubis segar dengan daun renyah, cocok untuk berbagai olahan masakan sehat dan bergizi.</p>
-          <a href="#" class="btn">Buy Now</a>
+          <a href="login.php" class="btn">Buy Now</a>
       </div>
     </div>
 
