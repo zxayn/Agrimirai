@@ -616,7 +616,7 @@
             <li><a href="#">Sign In</a></li>
             <li><a href="#">My Cart</a></li>
             <li><a href="#">My Wishlist</a></li>
-            <li><a href="#">Check Outp</a></li>
+            <li><a href="#">Check Out</a></li>
           </ul>
         </div>
 
