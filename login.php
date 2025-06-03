@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) {
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#galery">Our Menu</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="#login">BAWOK</a></li>
       </ul>
     </div>
   </div>
