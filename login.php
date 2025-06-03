@@ -515,7 +515,7 @@ header .fa-bars {
 
       <!-- Regis -->
       <div class="d-grid gap-2" style="text-align: right;">
-        <a href="registrasi.php" class="register-link">Belum punya akun? Daftar Sekarangggggg</a>
+        <a href="registrasi.php" class="register-link">Belum punya akun? Daftar Sekarang</a>
       </div>
 
       <!-- Submit -->
