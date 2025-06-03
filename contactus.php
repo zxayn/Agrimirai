@@ -4,46 +4,363 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="stylec.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="stylec.css"/> -->
+
 </head>
+
+<style>
+:root {
+    --main-color: #19735d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+/* Header (Navbar) Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--main-color);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    flex: 1;
+    text-align: left;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: #fff;
+}
+
+header .navbar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #fff;
+}
+
+header .navbar a:hover {
+    color: #666;
+}
+
+header .icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: #666;
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #fff;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none; /* Hidden by default, shown in media queries */
+}
+
+/* Global Body and Layout */
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#contact {
+    padding-top: 6rem;
+}
+
+.hero {
+    background-image: url('img/contactusimg1.jpg'); /* Ganti dengan path gambar kamu */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay hitam transparan */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.wave {
+    width: 100%;
+    margin: 20px auto;
+    height: 40px;
+}
+
+#faqu {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.contact-section {
+    padding: 50px;
+}
+
+.contact-box {
+    background-color: #003d33;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    margin-bottom: 15px;
+}
+
+.contact-box .btn {
+    background-color: #f4f4dc;
+    color: #003d33;
+    border: none;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #003d33;
+}
+
+.map-responsive {
+    position: relative;
+    padding-bottom: 40%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 3rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    border: 0;
+}
+
+.footer {
+    background-color: #5E8D92;
+    color: white;
+    padding: 40px 0;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .social-icons i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+.footer .contact-info i {
+    margin-right: 8px;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-responsive {
+        width: auto;
+        height: auto;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    header .fa-bars {
+        display: block; /* Show the hamburger icon */
+        order: 0;
+        margin-right: 1.5rem;
+        margin-left: 0;
+    }
+    header .logo {
+        flex: 3;
+        order: 1;
+        text-align: center;
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--main-color);
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 999;
+        max-height: 0; /* Hidden by default */
+        overflow: hidden;
+        transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    header #toggler:checked ~ .navbar {
+        max-height: 500px; /* Expand when toggler is checked */
+        transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    header .navbar a {
+        margin: 1.5rem 0 1.5rem 2rem;
+        padding: 1.5rem 0;
+        background: transparent;
+        border: none;
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: #fff;
+        border-radius: 0;
+    }
+
+    header .icons {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+    }
+    header input[type="checkbox"] {
+        order: -1;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+</style>
+
+<!-- Body -->
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#" style="font-weight: bold;">
-            <img src="img/logo2.png" alt="Logo" width="33" height="33" class="d-inline-block align-text-top rounded-circle img-thumbnail">
-            AgriMirai</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portofolio2.html">About me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#project">Project</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Social & More</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://www.instagram.com/a.andi14">Instagram</a></li>
-                            <li><a class="dropdown-item" href="Gallery.html">Gallery</a></li>
-                        </ul>   
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>  
-    <!-- NAVBAR END -->
-     <!--Jumbotron-->
+
+<!-- NAVBAR -->
+    <header>
+
+  <input type="checkbox"  name="" id="toggler">
+  <label for="toggler" class="fas fa-bars"></label>
+
+  <a href="index.php" class="logo">agrimirai<span>.</span></a>
+
+  <nav class="navbar">
+    <a href="index.php">Home</a>
+    <a href="index.php">About</a>
+    <a href="index.php">Products</a>
+  </nav>
+
+  <div class="icons">
+
+    <a href="contactus.php" class="fas fa-user"></a>
+    <a href="produk.php" class="fas fa-shopping-cart"></a>
+
+  </div>
+
+</header>
+<!-- NAVBAR END -->
+
+    <!--Jumbotron-->
         <div class="hero">
             <div class="overlay"></div>
             <div class="hero-content">

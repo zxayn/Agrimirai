@@ -551,7 +551,7 @@ header .fa-bars{
     <div class="content">
       <h3>Selada Hydroponics</h3>
       <p>Selada hidroponik adalah metode budidaya selada tanpa menggunakan tanah, melainkan dengan media air yang diperkaya nutrisi. Teknik ini memungkinkan pertumbuhan selada yang lebih cepat, higienis, dan ramah lingkungan. Dengan kontrol nutrisi dan lingkungan yang optimal, selada hidroponik menghasilkan daun yang segar, renyah, serta bebas pestisida, sehingga sangat cocok untuk konsumsi sehat sehari-hari.</p>
-      <a href="#" class="btn">Learn more</a>
+      <a href="#products" class="btn">Learn more</a>
     </div>
   </div>
 
@@ -651,8 +651,8 @@ header .fa-bars{
 
     <div class="box">
       <h3>Sosial Media</h3>
-      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="#"><i class="fab fa-github"></i> Github</a>
+      <a href="https://www.instagram.com/zxayn12/"><i class="fab fa-instagram"></i> @zxayn12</a>
+      <a href="https://github.com/zxayn"><i class="fab fa-github"></i> Jidan!!</a>
     </div>
 
     <div class="box">

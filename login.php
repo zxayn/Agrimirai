@@ -61,7 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) {
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <!-- SweetAlert2 -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <style>
+
+<style>
 
 :root {
 --main-color: #19735d;
@@ -169,7 +170,7 @@ header .fa-bars {
     }
 
     .login-wrapper {
-      margin-top: 120px;
+      margin-top: 150px;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
@@ -255,12 +256,14 @@ header .fa-bars {
     .btn-success {
       background-color: #19735d;
       color: #fff;
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       padding: 1.3rem 0;
       border-radius: 8px;
       border: none;
       cursor: pointer;
-      transition: background 0.2s;
+      letter-spacing: 0.5px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
 
     .btn-success:hover {
@@ -356,37 +359,38 @@ header .fa-bars {
       }
     }
 
-    /* Responsive Adjustments for Header (Navbar) */
-    @media (max-width: 991px) {
-    html {
-    font-size: 55%;
-    }
-    header {
-    padding: 2rem;
-    }
-    }
+/* Responsive Adjustments for Header (Navbar) */
+@media (max-width: 991px) {
+  html {
+  font-size: 55%;
+}
+header {
+  padding: 2rem;
+  }
+}
 
-    @media (max-width: 768px) {
-    header {
-    flex-wrap: wrap;
-    }
-    header .fa-bars {
-    display: block; /* Show the hamburger icon */
-    order: 0;
-    margin-right: 1.5rem;
-    margin-left: 0;
-    }
-    header .logo {
-    flex: 3;
-    order: 1;
-    text-align: center;
-    margin-left: 0;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    }
-    header .navbar {
-    position: absolute;
+@media (max-width: 768px) {
+header {
+  flex-wrap: wrap;
+}
+
+header .fa-bars {
+  display: block; /* Show the hamburger icon */
+  order: 0;
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+header .logo {
+  flex: 3;
+  order: 1;
+  text-align: center;
+  margin-left: 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+header .navbar {
+  position: absolute;
     top: 100%;
     left: 0;
     right: 0;
@@ -434,7 +438,7 @@ header .fa-bars {
     }
   }
 
-  </style>
+</style>
 
   
 </head>
@@ -447,12 +451,12 @@ header .fa-bars {
   <input type="checkbox"  name="" id="toggler">
   <label for="toggler" class="fas fa-bars"></label>
 
-  <a href="#" class="logo">agrimirai<span>.</span></a>
+  <a href="index.php" class="logo">agrimirai<span>.</span></a>
 
   <nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
+    <a href="index.php">Home</a>
+    <a href="index.php">About</a>
+    <a href="index.php">Products</a>
   </nav>
 
   <div class="icons">
@@ -478,7 +482,7 @@ header .fa-bars {
 <div class="container login-wrapper" id="conten">
   <!-- Left Info -->
   <div class="login-left">
-    <a class="brand" href="#">
+    <a class="brand" href="index.php">
       <img src="img/logo.png" alt="Logo AgriMirai" width="120" height="120" style="margin-bottom: 25px;">
     </a>
     <h2>Selamat Datang Petani</h2>
@@ -515,7 +519,7 @@ header .fa-bars {
 
       <!-- Regis -->
       <div class="d-grid gap-2" style="text-align: right;">
-        <a href="registrasi.php" class="register-link">Belum punya akun? Daftar Sekarang</a>
+        <a href="registrasi.php" class="register-link" style="text-decoration: none;">Belum punya akun? Daftar Sekarang</a>
       </div>
 
       <!-- Submit -->
@@ -537,7 +541,7 @@ Swal.fire({
   confirmButtonText: 'OK',
   confirmButtonColor: '#19735d'
 }).then(() => {
-  window.location.href = "home.php"; // Ganti jika ingin redirect ke halaman lain
+  window.location.href = "produk.php"; // Ganti jika ingin redirect ke halaman lain
 });
 </script>
 <?php endif; ?>
