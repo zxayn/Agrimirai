@@ -566,7 +566,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <!-- <div class="col">
           <div class="card product-card">
             <div class="offer-badge">ON OFFER</div>
             <div class="cart-icon">&#128722;</div>
@@ -578,7 +578,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Bottom -->
     <footer class="footer">
