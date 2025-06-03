@@ -476,8 +476,8 @@
         <div class="carousel-item active" data-bs-interval="10000">
           <img src="img/fertilizati.jpg" class="d-block w-100" />
           <div class="carousel-caption d-none d-md-block text-light blur-box">
-            <h5>Fertillizer</h5>
-            <p>We supply highly quality organic fertillizer</p>
+            <h5>Fertillizer & Seeds</h5>
+            <p>We supply highly quality seeds & organic fertillizer</p>
           </div>
         </div>
       </div>
@@ -529,6 +529,51 @@
             <div class="card-body">
               <h6 class="card-title">Pupuk Padi POC Booster 1L</h6>
               <p class="card-text">Rp 80.000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card product-card">
+            <div class="offer-badge">ON OFFER</div>
+            <div class="cart-icon">&#128722;</div>
+            <img src="ppk/pakcoy 68.jpg" class="card-img-top" alt="Fresh Onion" />
+            <div class="card-body">
+              <h6 class="card-title">Benih Sawi Pakcoy 250s</h6>
+              <p class="card-text">Rp 6.800</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card product-card">
+            <div class="offer-badge">ON OFFER</div>
+            <div class="cart-icon">&#128722;</div>
+            <img src="ppk/selada 68.jpg" class="card-img-top" alt="Fresh Onion" />
+            <div class="card-body">
+              <h6 class="card-title">Benih Selada 300s</h6>
+              <p class="card-text">Rp 6.800</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card product-card">
+            <div class="offer-badge">ON OFFER</div>
+            <div class="cart-icon">&#128722;</div>
+            <img src="ppk/selada merah 58.jpg" class="card-img-top" alt="Fresh Onion" />
+            <div class="card-body">
+              <h6 class="card-title">Benih Selada Merah 100s</h6>
+              <p class="card-text">Rp 5.800</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card product-card">
+            <div class="offer-badge">ON OFFER</div>
+            <div class="cart-icon">&#128722;</div>
+            <img src="ppk/tomat 58.jpg" class="card-img-top" alt="Fresh Onion" />
+            <div class="card-body">
+              <h6 class="card-title">Benih Tomat 50s</h6>
+              <p class="card-text">Rp 5.800</p>
             </div>
           </div>
         </div>
