@@ -421,122 +421,134 @@ body {
 </header>
 <!-- NAVBAR END -->
 
-    <!--Jumbotron-->
-        <div class="hero">
-            <div class="overlay"></div>
-            <div class="hero-content">
-                <h1>Contact Us</h1>
-                <svg class="wave" viewBox="0 0 1440 100">
-                <path fill="none" stroke="#ffffff" stroke-width="4"
-                        d="M0,50 C360,0 1080,100 1440,50" />
-                </svg>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+<!--Jumbotron-->
+<div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Contact Us</h1>
+        <svg class="wave" viewBox="0 0 1440 100">
+        <path fill="none" stroke="#ffffff" stroke-width="4" d="M0,50 C360,0 1080,100 1440,50" /></svg>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+    </div>
+</div>
+
+<!-- jumbotron end -->
+
+<!--FAQ-->
+
+<section id="faqu">
+    <div class="container py-5">
+        <div class="row">
+
+<!-- Left Column -->
+
+        <div class="col-md-6 ps-md-4 mb-5">
+            <h2 class="faq-title" style="font-weight: bold;">Frequently Asked<br>Questions</h2>
+                <p>Lorem ipsum dolor sit amet, cons ectetur adipis cing elit. Etiam ullam corper risus nec porttitor rhoncus. Etiam dolor arcu.</p>
+        </div>
+
+<!-- Right Column -->
+
+<div class="col-md-6">
+    <div class="accordion" id="faqAccordion">
+
+<!-- Item 1 -->
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">How long does it take to create an article?
+            </button>
+        </h2>
+    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
+        </div>
+    </div>
+</div>
+
+<!-- Item 2 -->
+
+<div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How much does it cost for a consultation on SEO?
+        </button>
+    </h2>
+    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Consultation pricing depends on the package and service type.</div>
+    </div>
+</div>
+
+<!-- Item 3 -->
+
+<div class="accordion-item">
+    <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What payment methods are available?
+    </button>
+    </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">We accept credit cards, PayPal, and bank transfers.</div>
+        </div>
+    </div>
+</div>
+</div>
+
+</section>
+
+<!--FAQ end-->
+
+<!-- Form -->
+
+<div class="container contact-section">
+    <div class="row align-items-center">
+
+<!-- Info Section -->
+
+<div class="col-md-6 d-flex flex-column justify-content-center align-items-start ps-md-5 mb-4">
+    <h3 class="fw-bold">Ask Us Anything</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
+    <div class="contact-info">
+        <p><i class="fas fa-map-marker-alt"></i> 918 Abner Road, Hudson</p>
+        <p><i class="fas fa-envelope"></i> example@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +1234 097 890</p>
+    </div>
+</div>
+
+<!-- Form Section -->
+
+<div class="col-md-6">
+    <div class="contact-box">
+<form>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="First Name">
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Last Name">
+        </div>
+    </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+        </div>
+        <button type="submit" class="btn mt-2">Send Message</button>
+</form>
+        </div>
             </div>
         </div>
-    <!-- jumbotron end -->
-
-    <!--FAQ-->
-    <section id="faqu">
-        <div class="container py-5">
-            <div class="row">
-                <!-- Left Column -->
-                <div class="col-md-6 ps-md-4 mb-5">
-                    <h2 class="faq-title" style="font-weight: bold;">Frequently Asked<br>Questions</h2>
-                    <p>Lorem ipsum dolor sit amet, cons ectetur adipis cing elit. Etiam ullam corper risus nec porttitor rhoncus. Etiam dolor arcu.</p>
-                </div>
-
-                <!-- Right Column -->
-                <div class="col-md-6">
-                    <div class="accordion" id="faqAccordion">
-                    <!-- Item 1 -->
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
-                        How long does it take to create an article?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
-                        </div>
-                    </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                        How much does it cost for a consultation on SEO?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                        Consultation pricing depends on the package and service type.
-                        </div>
-                    </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                        What payment methods are available?
-                        </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                        We accept credit cards, PayPal, and bank transfers.
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--FAQ end-->
-
-    <!--Form-->
-    <div class="container contact-section">
-  <div class="row align-items-center">
-    <!-- Info Section -->
-    <div class="col-md-6 d-flex flex-column justify-content-center align-items-start ps-md-5 mb-4">
-      <h3 class="fw-bold">Ask Us Anything</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
-      <div class="contact-info">
-        <p><i class="fas fa-map-marker-alt "></i>918 Abner Road, Hudson</p>
-        <p><i class="fas fa-envelope "></i>example@gmail.com</p>
-        <p><i class="fas fa-phone"></i>+1234 097 890</p>
-      </div>
     </div>
 
-    <!-- Form Section -->
-    <div class="col-md-6">
-      <div class="contact-box">
-        <form>
-          <div class="row">
-            <div class="col-md-6">
-              <input type="text" class="form-control" placeholder="First Name">
-            </div>
-            <div class="col-md-6">
-              <input type="text" class="form-control" placeholder="Last Name">
-            </div>
-          </div>
-          <input type="email" class="form-control" placeholder="Email">
-          <textarea class="form-control" rows="4" placeholder="Message"></textarea>
-          <button type="submit" class="btn mt-2">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>  
-    <!--Form End-->
+<!-- Form End -->
 
-    <!--Maps-->
-    <section id="Maps">
-        <div class="map-responsive">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7906.34056310714!2d111.99902469999999!3d-7.771760899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1748531069400!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
-    <!--Maps end-->
+<!--Maps-->
+
+<section id="Maps">
+    <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7906.34056310714!2d111.99902469999999!3d-7.771760899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1748531069400!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<!--Maps end-->
 
 <!-- footer awal -->
 
