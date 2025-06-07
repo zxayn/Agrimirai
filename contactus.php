@@ -40,7 +40,7 @@ header {
     left: 0;
     right: 0;
     background: var(--main-color);
-    padding: 2rem 9%;
+    padding: 1.6rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,10 +71,20 @@ header .navbar a {
     font-size: 2rem;
     padding: 0 1.5rem;
     color: #fff;
+    text-decoration: none; /* Remove underline */
 }
 
 header .navbar a:hover {
     color: #666;
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+header .logo {
+    text-decoration: none; /* Remove underline from logo */
+}
+
+header .logo:hover {
+    text-decoration: none; /* Ensure no underline on hover */
 }
 
 header .icons {
@@ -88,10 +98,12 @@ header .icons a {
     font-size: 2.5rem;
     color: #fff;
     margin-left: 1.5rem;
+    text-decoration: none; /* Remove underline from icons */
 }
 
 header .icons a:hover {
     color: #666;
+    text-decoration: none; /* Ensure no underline on hover */
 }
 
 header #toggler {
@@ -121,7 +133,7 @@ body {
 }
 
 .hero {
-    background-image: url('img/contactusimg1.jpg'); /* Ganti dengan path gambar kamu */
+    background-image: url('img/regis.jpeg'); /* Ganti dengan path gambar kamu */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -219,31 +231,79 @@ body {
 }
 
 .footer {
-    background-color: #5E8D92;
-    color: white;
-    padding: 40px 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
-.footer a {
-    color: white;
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer .box-container .box {
+    flex: 1 1 250px;
+    min-width: 220px;
+    max-width: 320px;
+    background: transparent;
+    text-align: center;
+}
+
+.footer .box-container .box h3 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    padding: 3rem 0;
+    font-weight: bold;
+    text-align: left;
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: .7rem 0;
     text-decoration: none;
+    text-align: left;
 }
-.footer a:hover {
+
+.footer .box-container .box a:hover {
+    color: var(--main-color);
     text-decoration: underline;
 }
-.footer .social-icons i {
-    font-size: 20px;
-    margin-right: 15px;
-}
-.footer .contact-info i {
-    margin-right: 8px;
-}
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.2);
-    padding-top: 15px;
-    margin-top: 20px;
+
+.footer .credit{
     text-align: center;
-    font-size: 14px;
+    padding: 1.5rem;
+    margin-top: 3.5rem;
+    padding-top: 4rem;
+    font-size: 1.8rem;
+    color: #333;
+    border-top: .1rem solid rgba(0,0,0,.1);
 }
+
+.footer .credit span {
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
@@ -337,25 +397,26 @@ body {
 <body>
 
 <!-- NAVBAR -->
-    <header>
 
-  <input type="checkbox"  name="" id="toggler">
-  <label for="toggler" class="fas fa-bars"></label>
+<header>
 
-  <a href="index.php" class="logo">agrimirai<span>.</span></a>
+<input type="checkbox"  name="" id="toggler">
+<label for="toggler" class="fas fa-bars"></label>
 
-  <nav class="navbar">
+<a href="index.php" class="logo">agrimirai<span>.</span></a>
+
+<nav class="navbar">
     <a href="index.php">Home</a>
     <a href="index.php">About</a>
     <a href="index.php">Products</a>
-  </nav>
+</nav>
 
-  <div class="icons">
+<div class="icons">
 
     <a href="contactus.php" class="fas fa-user"></a>
     <a href="produk.php" class="fas fa-shopping-cart"></a>
 
-  </div>
+</div>
 
 </header>
 <!-- NAVBAR END -->
@@ -477,57 +538,38 @@ body {
     </section>
     <!--Maps end-->
 
-    <!--Footer-->
-    <footer class="footer">
-  <div class="container">
-    <div class="row text-white">
-      <div class="col-md-3 mb-4">
-        <h5><strong><i class="fas fa-circle me-2"></i>AgriMirai</strong></h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
-        <p class="contact-info"><i class="fas fa-map-marker-alt"></i> London Eye, London UK</p>
-        <p class="contact-info"><i class="fas fa-phone"></i> (+78) 765 685</p>
-        <p class="contact-info"><i class="fas fa-envelope"></i> mail@influenca.id</p>
-      </div>
-      <div class="col-md-3 mb-4">
-        <h6>Navigation</h6>
-        <ul class="list-unstyled">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3 mb-4">
-        <h6>Quick Link</h6>
-        <ul class="list-unstyled">
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#faqu">FAQs</a></li>
-          <li><a href="#">Booking</a></li>
-          <li><a href="#">Pages</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3 mb-4">
-        <h6>Services</h6>
-        <ul class="list-unstyled">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">404</a></li>
-        </ul>
-        <div class="social-icons mt-3">
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
+<!-- footer awal -->
+
+<section class="footer">
+<div class="box-container">
+    <div class="box">
+        <h3>Quick Link</h3>
+        <a href="#home" >home</a>
+        <a href="#about" >about</a>
+        <a href="#products" >products</a>
     </div>
 
-    <div class="footer-bottom">
-      © 2025 AgriMirai • All Rights Reserved
+    <div class="box">
+        <h3>Sosial Media</h3>
+        <a href="https://www.instagram.com/zxayn12/"><i class="fab fa-instagram"></i> @zxayn12</a>
+        <a href="https://github.com/zxayn"><i class="fab fa-github"></i> Jidan!!</a>
     </div>
-  </div>
-</footer>
-    <!--Footer End-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <div class="box">
+        <h3>Have a Questions?</h3>
+        <a href="#" ><i class="fas fa-map-marker-alt"></i> Kediri, East Java, Indonesia</a>
+        <a href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRsqXpxvrLdZhkqmBcqHMCTgcrjDjnpgqWqbxqLXbTRtvGCWWzJlxMKjXrVKNSNlnhFckxl">
+            <i class="far fa-envelope"></i> zidanxjr8@gmail.com
+        </a>
+    </div>
+
+</div>
+
+    <div class="credit"> create by <span>Agrimirai web designer</span> | all rights reserved.</div>
+    
+</section>
+
+<!-- footer akhir -->
+
 </body>
 </html>
