@@ -558,9 +558,9 @@ header .fa-bars {
 
                 <!-- Thumbnails -->
                 <div class="d-flex justify-content-center mt-3">
-                  <img src="pdk/wortel2.jpg" class="img-thumbnail mx-1 thumb-img" width="60" style="cursor: pointer" />
-                  <img src="pdk/wortel3.jpg" class="img-thumbnail mx-1 thumb-img" width="60" style="cursor: pointer" />
-                  <img src="pdk/wortel1.jpg" class="img-thumbnail mx-1 thumb-img" width="60" style="cursor: pointer" />
+                  <img src="img/wortel2.jpg" class="img-thumbnail mx-1 thumb-img" width="60" style="cursor: pointer" />
+                  <img src="img/wortel1.jpg" class="img-thumbnail mx-1 thumb-img" width="60" style="cursor: pointer" />
+                  <img src="img/wortel3.jpg" class="img-thumbnail mx-1 thumb-img" width="60" style="cursor: pointer" />
                 </div>
               </div>
 
