@@ -58,7 +58,7 @@ header {
   left: 0;
   right: 0;
   background: var(--main-color);
-  padding: 2rem 9%;
+  padding: 1.6rem 9%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -418,9 +418,9 @@ header .fa-bars {
   <a href="index.php" class="logo">agrimirai<span>.</span></a>
 
   <nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
+    <a href="index.php">Home</a>
+    <a href="index.php">About</a>
+    <a href="index.php">Products</a>
   </nav>
 
   <div class="icons">
@@ -434,404 +434,495 @@ header .fa-bars {
 
 <!-- header akhir  -->
 
-<!-- Carousel -->
-    
-    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+<!-- Carousel Otomatis -->
+    <div id="carouselExampleDark2" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark2" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
 
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="img/caro1.jpg" class="d-block w-100" alt="Slide 1" />
-          <div class="carousel-caption d-none d-md-block text-light blur-box">
-            <h5>Fresh Food</h5>
-            <p>We supply highly quality organic products</p>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="img/caro2.jpg" class="d-block w-100" alt="Slide 2" />
-          <div class="carousel-caption d-none d-md-block text-light blur-box">
-            <h5>Farm Fresh</h5>
-            <p>Fruits & Vegetables Food 100% organic</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/caro3.jpg" class="d-block w-100" alt="Slide 3" />
-          <div class="carousel-caption d-none d-md-block text-light blur-box">
-            <h5>Organic Food</h5>
-            <p>Looking for the fresh Organic Food</p>
-          </div>
+      <div class="carousel-item active">
+        <img src="img/caro1.jpg" class="d-block w-100" alt="Slide 1" />
+        <div class="carousel-caption d-none d-md-block text-light blur-box">
+        <h5>Fresh Food</h5>
+        <p>We supply highly quality organic products</p>
         </div>
       </div>
+      <div class="carousel-item">
+        <img src="img/caro2.jpg" class="d-block w-100" alt="Slide 2" />
+        <div class="carousel-caption d-none d-md-block text-light blur-box">
+        <h5>Farm Fresh</h5>
+        <p>Fruits & Vegetables Food 100% organic</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/caro3.jpg" class="d-block w-100" alt="Slide 3" />
+        <div class="carousel-caption d-none d-md-block text-light blur-box">
+        <h5>Organic Food</h5>
+        <p>Looking for the fresh Organic Food</p>
+        </div>
+      </div>
+      </div>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark2" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <script>
+      // Atur kecepatan carousel (misal: 5 detik per slide)
+      document.addEventListener('DOMContentLoaded', function () {
+      var myCarousel = document.querySelector('#carouselExampleDark2');
+      if (myCarousel) {
+        new bootstrap.Carousel(myCarousel, {
+        interval: 7000, // 5000 ms = 5 detik
+        ride: 'carousel',
+        pause: false,
+        wrap: true
+        });
+      }
+      });
+    </script>
 
 <!-- End Carousel -->
 
 <!-- Top Categories Section -->
-    
+
     <div class="category-section">
       <h3 class="mb-4 fw-bold">Rekomendasi Produk</h3>
       <div class="d-flex justify-content-center flex-wrap">
-        <div class="category-item">
-          <img src="img/buah.jpg" alt="Fruits" />
-          <p>Buah</p>
-        </div>
-        <div class="category-item">
-          <img src="img/sayur.png" alt="Vegetables" />
-          <p>Sayur</p>
-        </div>
-        <div class="category-item">
-          <img src="img/beras.jpg" alt="Drinks" />
-          <p>Beras</p>
-        </div>
-        <div class="category-item">
-          <img src="img/gandum.png" alt="Eggs" />
-          <p>Gandum</p>
-        </div>
-        <div class="category-item">
-          <img src="img/kacang.jpg" alt="Cake" />
-          <p>Kacang</p>
-        </div>
-        <div class="category-item">
-          <img src="img/pupuk.jpg" alt="Meats" />
-          <p>Pupuk</p>
-        </div>
+      <a href="#buah" class="category-item" style="text-decoration:none;">
+        <img src="img/buah.jpg" alt="Fruits" />
+        <p>Buah</p>
+      </a>
+      <a href="#sayur" class="category-item" style="text-decoration:none;">
+        <img src="img/sayur.png" alt="Vegetables" />
+        <p>Sayur</p>
+      </a>
+      <a href="#bahan" class="category-item" style="text-decoration:none;">
+        <img src="img/beras.jpg" alt="bahan" />
+        <p>Bahan Pokok</p>
+      </a>
+      <a href="#bibit" class="category-item" style="text-decoration:none;">
+        <img src="img/bibit.jpg" alt="Bibit" />
+        <p>Bibit</p>
+      </a>
+      <a href="#pupuk" class="category-item" style="text-decoration:none;">
+        <img src="img/pupuk.jpg" alt="Pupuk" />
+        <p>Pupuk</p>
+      </a>
       </div>
     </div>
 
 <!-- End Categoris -->
 
-<!-- Shop -->
-    
-    <div class="container py-5">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+<!-- Section: Sayur -->
 
-        <!-- Card start -->
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/wortel.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Wortel</h6>
-              <p class="card-text">Rp 11.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
+<section class="produk" id="sayur">
+  <div class="container py-5">
+    <h3 class="mb-4 fw-bold text-center">Sayur</h3>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/wortel.jpg" class="card-img-top" alt="Wortel" />
+          <div class="card-body">
+            <h6 class="card-title">Wortel</h6>
+            <p class="card-text">Rp 11.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/tomat.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Tomat</h6>
-              <p class="card-text">Rp 10.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/tomat.jpg" class="card-img-top" alt="Tomat" />
+          <div class="card-body">
+            <h6 class="card-title">Tomat</h6>
+            <p class="card-text">Rp 10.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/timun.jpeg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Timun</h6>
-              <p class="card-text">Rp 15.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/timun.jpeg" class="card-img-top" alt="Timun" />
+          <div class="card-body">
+            <h6 class="card-title">Timun</h6>
+            <p class="card-text">Rp 15.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/terong.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Terong</h6>
-              <p class="card-text">Rp 13.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/terong.jpg" class="card-img-top" alt="Terong" />
+          <div class="card-body">
+            <h6 class="card-title">Terong</h6>
+            <p class="card-text">Rp 13.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/selada.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Selada</h6>
-              <p class="card-text">Rp 20.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/selada.jpg" class="card-img-top" alt="Selada" />
+          <div class="card-body">
+            <h6 class="card-title">Selada</h6>
+            <p class="card-text">Rp 20.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/kubis.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Kubis</h6>
-              <p class="card-text">Rp 12.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/kubis.jpg" class="card-img-top" alt="Kubis" />
+          <div class="card-body">
+            <h6 class="card-title">Kubis</h6>
+            <p class="card-text">Rp 12.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/cabe.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Cabai</h6>
-              <p class="card-text">Rp 53.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/cabe.jpg" class="card-img-top" alt="Cabai" />
+          <div class="card-body">
+            <h6 class="card-title">Cabai</h6>
+            <p class="card-text">Rp 53.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/kentang.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Kentang</h6>
-              <p class="card-text">Rp 25.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/kentang.jpg" class="card-img-top" alt="Kentang" />
+          <div class="card-body">
+            <h6 class="card-title">Kentang</h6>
+            <p class="card-text">Rp 25.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- End Shop -->
+<!-- End Section: Sayur -->
 
-    <!-- Gambar Buah-->
-    
-    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+<!-- Section: Buah -->
+<section class="produk" id="buah">
+  <div class="container py-5">
+    <h3 class="mb-4 fw-bold text-center">Buah</h3>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/anggur.jpg" class="card-img-top" alt="Anggur" />
+          <div class="card-body">
+            <h6 class="card-title">Anggur</h6>
+            <p class="card-text">Rp 60.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/stroberi.jpg" class="card-img-top" alt="Stroberi" />
+          <div class="card-body">
+            <h6 class="card-title">Stroberi</h6>
+            <p class="card-text">Rp 80.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/naga.jpg" class="card-img-top" alt="Buah Naga" />
+          <div class="card-body">
+            <h6 class="card-title">Buah Naga</h6>
+            <p class="card-text">Rp 30.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="pdk/melon.jpg" class="card-img-top" alt="Melon" />
+          <div class="card-body">
+            <h6 class="card-title">Melon</h6>
+            <p class="card-text">Rp 20.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+</section>
+<!-- End Section: Buah -->
+
+<!-- Carousel Otomatis -->
+
+    <div id="carouselExampleDark1" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="img/fruits.jpg" class="d-block w-100" />
-          <div class="carousel-caption d-none d-md-block text-light blur-box">
-            <h5>Fruits & Farm Products</h5>
-            <p>We supply highly quality organic fruits & farm products</p>
+      <div class="carousel-item active">
+        <img src="img/6.jpg" class="d-block w-100" alt="Slide 1" />
+        <div class="carousel-caption d-none d-md-block text-light blur-box">
+        <h5>Fresh Food</h5>
+        <p>We supply highly quality organic products</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/2.jpg" class="d-block w-100" alt="Slide 2" />
+        <div class="carousel-caption d-none d-md-block text-light blur-box">
+        <h5>Farm Fresh</h5>
+        <p>Fruits & Vegetables Food 100% organic</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/3.jpg" class="d-block w-100" alt="Slide 3" />
+        <div class="carousel-caption d-none d-md-block text-light blur-box">
+        <h5>Organic Food</h5>
+        <p>Looking for the fresh Organic Food</p>
+        </div>
+      </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark1" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <script>
+      // Atur kecepatan carousel (misal: 5 detik per slide)
+      document.addEventListener('DOMContentLoaded', function () {
+      var myCarousel = document.querySelector('#carouselExampleDark1');
+      if (myCarousel) {
+        new bootstrap.Carousel(myCarousel, {
+        interval: 4000, // 5000 ms = 5 detik
+        ride: 'carousel',
+        pause: false,
+        wrap: true
+        });
+      }
+      });
+    </script>
+
+<!-- End Carousel -->
+
+<!-- Section: bahan -->
+<section class="produk" id="bahan">
+  <div class="container py-5">
+    <h3 class="mb-4 fw-bold text-center">Bahan Pokok</h3>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="img/beras.jpg" class="card-img-top" alt="Beras" />
+          <div class="card-body">
+            <h6 class="card-title">Beras</h6>
+            <p class="card-text">Rp 14.000 (kg)</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+            <div class="cart-icon">&#128722;</div>
+                <img src="img/gandum.png" class="card-img-top" alt="Gandum" />
+                <div class="card-body">
+                  <h6 class="card-title">Gandum</h6>
+                  <p class="card-text">Rp 12.000 (kg)</p>
+                  <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+                </div>
+          </div>
+        </div>
+          <div class="col">
+            <div class="card product-card">
+                <div class="offer-badge">ON OFFER</div>
+                  <div class="cart-icon">&#128722;</div>
+                    <img src="img/bawang merah.jpg" class="card-img-top" alt="Gandum" />
+                    <div class="card-body">
+                      <h6 class="card-title">Bawang Merah</h6>
+                      <p class="card-text">Rp 41.300 (kg)</p>
+                      <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+                    </div>
+            </div>
+          </div>
+            <div class="col">
+              <div class="card product-card">
+                <div class="offer-badge">ON OFFER</div>
+                  <div class="cart-icon">&#128722;</div>
+                    <img src="img/bawang putih.jpg" class="card-img-top" alt="Gandum" />
+                    <div class="card-body">
+                      <h6 class="card-title">Bawang Putih</h6>
+                      <p class="card-text">Rp 41.100 (kg)</p>
+                      <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+                    </div>
+              </div>
+            </div>
+    </div>
+  </div>
+</section>
+<!-- End Section: bahan -->
+
+<!-- Section: Pupuk -->
+<section class="produk" id="pupuk">
+  <div class="container py-5">
+    <h3 class="mb-4 fw-bold text-center">Pupuk</h3>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="ppk/10k.jpg" class="card-img-top" alt="Pupuk Organik Kohe 2L" />
+          <div class="card-body">
+            <h6 class="card-title">Pupuk Organik Kohe 2L</h6>
+            <p class="card-text">Rp 10.000</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="ppk/20k.jpg" class="card-img-top" alt="Pupuk Organik Cair Infarm" />
+          <div class="card-body">
+            <h6 class="card-title">Pupuk Organik Cair Infarm</h6>
+            <p class="card-text">Rp 20.000</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="ppk/42k.jpg" class="card-img-top" alt="Pupuk Penunjang Tunas 500ml" />
+          <div class="card-body">
+            <h6 class="card-title">Pupuk Penunjang Tunas 500ml</h6>
+            <p class="card-text">Rp 42.000</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="ppk/80k.jpg" class="card-img-top" alt="Pupuk Padi POC Booster 1L" />
+          <div class="card-body">
+            <h6 class="card-title">Pupuk Padi POC Booster 1L</h6>
+            <p class="card-text">Rp 80.000</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+<!-- End Section: Pupuk -->
 
-    <!-- End Buah -->
+<!-- Section: Bibit (tidak terkait link kategori) -->
+<section class="produk" id="bibit">
+  <div class="container py-5">
+    <h3 class="mb-4 fw-bold text-center">Bibit</h3>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="img/selada hijau.jpg" class="card-img-top" alt="Bibit Selada Hijau 300s" />
+          <div class="card-body">
+            <h6 class="card-title">Bibit Selada Hijau 300s</h6>
+            <p class="card-text">Rp 6.800</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="img/tomat.jpg" class="card-img-top" alt="Bibit Tomat 50s" />
+          <div class="card-body">
+            <h6 class="card-title">Bibit Tomat 50s</h6>
+            <p class="card-text">Rp 5.800</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="img/selada merah.jpg" class="card-img-top" alt="Bibit Selada Merah 100s" />
+          <div class="card-body">
+            <h6 class="card-title">Bibit Selada Merah 100s</h6>
+            <p class="card-text">Rp 5.800</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card product-card">
+          <div class="offer-badge">ON OFFER</div>
+          <div class="cart-icon">&#128722;</div>
+          <img src="img/pakcoy.jpg" class="card-img-top" alt="Bibit Sawi Pakcoy 250s" />
+          <div class="card-body">
+            <h6 class="card-title">Bibit Sawi Pakcoy 250s</h6>
+            <p class="card-text">Rp 6.800</p>
+            <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Section: Bibit -->
 
-    <!-- Shop Buah -->
+<!-- Shop Section End -->
+
+
     
-    <div class="container py-5">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-
-        <!-- Card Start -->
-        
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/anggur.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Anggur</h6>
-              <p class="card-text">Rp 60.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/stroberi.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Stroberi</h6>
-              <p class="card-text">Rp 80.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/naga.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Buah Naga</h6>
-              <p class="card-text">Rp 30.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/melon.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Melon</h6>
-              <p class="card-text">Rp 20.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/jagung.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Jagung</h6>
-              <p class="card-text">Rp 7000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="pdk/kacang.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Kacang Tanah</h6>
-              <p class="card-text">Rp 28.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="img/beras.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Beras</h6>
-              <p class="card-text">Rp 14.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="img/gandum.png" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Gandum</h6>
-              <p class="card-text">Rp 12.000 (kg)</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Gambar Pupuk-->
-    
-    <div id="carouselExampleDark" class="carousel carousel-dark slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="img/fertilizati.jpg" class="d-block w-100" />
-          <div class="carousel-caption d-none d-md-block text-light blur-box">
-            <h5>Fertillizer</h5>
-            <p>We supply highly quality organic fertillizer</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-<!-- End Pupuk -->
-
-<!-- Shop Pupuk -->
-    
-    <div class="container py-5">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-
-<!-- Card start -->
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="ppk/10k.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Pupuk Organik Kohe 2L</h6>
-              <p class="card-text">Rp 10.000</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="ppk/20k.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Pupuk Organik Cair Infarm</h6>
-              <p class="card-text">Rp 20.000</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="ppk/42k.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Pupuk Penunjang Tunas 500ml</h6>
-              <p class="card-text">Rp 42.000</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="ppk/80k.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Pupuk Padi POC Booster 1L</h6>
-              <p class="card-text">Rp 80.000</p>
-              <a href="buy.php" class="btn btn-primary mt-2">Beli Sekarang</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
 <!-- footer awal -->
 
   <section class="footer">
@@ -863,7 +954,7 @@ header .fa-bars {
 
     <div class="credit"> create by <span>Agrimirai web designer</span> | all rights reserved.</div>
 
-  </section>
+</section>
 <!-- footer akhir -->
 
 

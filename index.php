@@ -569,7 +569,7 @@ header .fa-bars{
   <section class="icons-container">
 
     <div class="icons">
-      <img src="img/world.png" alt="">
+      <img src="img/sustainable.png" alt="">
       <div class="info">
         <h3>Address</h3>
           <p>Kediri, East Java, Indonesia</p>
@@ -577,22 +577,26 @@ header .fa-bars{
     </div>
 
     <div class="icons">
-      <img src="img/paper-plane.png" alt="">
+      <img src="img/flask.png" alt="">
       <div class="info">
-        <h3>Email Addrees</h3>
+        <h3>Rekomendasi Tanaman</h3>
             <p>
-              <a href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRsqXpxvrLdZhkqmBcqHMCTgcrjDjnpgqWqbxqLXbTRtvGCWWzJlxMKjXrVKNSNlnhFckxl" style="color: #666; text-decoration: none;">
-                zidanxjr8@gmail.com
+              <a href="">
+                Rekomendasi Tanaman Hidroponik
               </a>
             </p>
       </div>
     </div>
 
     <div class="icons">
-      <img src="img/user.png" alt="">
+      <img src="img/ramen.png" alt="">
       <div class="info">
-        <h3>Contact</h3>
-          <p>Silahkan Hubungi Custom Sercives jika ada kendala</p>
+        <h3>Produk Olahan</h3>
+            <p>
+              <a href="">
+                Kami menyediakan berbagai produk olahan segar yang Siap Saji
+              </a>
+            </p>
       </div>
     </div>
 
@@ -662,7 +666,7 @@ header .fa-bars{
 
     <div class="box">
       <h3>Have a Questions?</h3>
-      <a href="#" ><i class="fas fa-map-marker-alt"></i> Kediri, East Java, Indonesia</a>
+      <a href="contactus.php" ><i class="fas fa-map-marker-alt"></i> Kediri, East Java, Indonesia</a>
       <a href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRsqXpxvrLdZhkqmBcqHMCTgcrjDjnpgqWqbxqLXbTRtvGCWWzJlxMKjXrVKNSNlnhFckxl">
         <i class="far fa-envelope"></i> zidanxjr8@gmail.com
       </a>
