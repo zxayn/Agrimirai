@@ -581,7 +581,7 @@ header .fa-bars{
       <div class="info">
         <h3>Rekomendasi Tanaman</h3>
             <p>
-              <a href="">
+              <a href="rekomendasi.php">
                 Rekomendasi Tanaman Hidroponik
               </a>
             </p>
