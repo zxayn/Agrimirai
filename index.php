@@ -593,7 +593,7 @@ header .fa-bars{
       <div class="info">
         <h3>Produk Olahan</h3>
             <p>
-              <a href="">
+              <a href="produk_olahan.php">
                 Kami menyediakan berbagai produk olahan segar yang Siap Saji
               </a>
             </p>
