@@ -212,7 +212,7 @@ header .fa-bars {
       }
 
 .footer {
-    padding-top: 2rem;
+    padding-top: 11rem;
     padding-bottom: 2rem;
 }
 
@@ -259,9 +259,10 @@ header .fa-bars {
 .footer .credit{
     text-align: center;
     padding: 1.5rem;
-    margin-top: 3.5rem;
+    margin-top: 5rem;
+    margin-bottom: -4rem;
     padding-top: 4rem;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: #333;
     border-top: .1rem solid rgba(0,0,0,.1);
 }
@@ -602,7 +603,7 @@ header .fa-bars {
       </div>
     </div>
 
-    <div class="container py-5">
+    <div class="container py-5" id="products">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
         <!-- Card 1 -->
         <div class="col-md-3">
@@ -655,46 +656,45 @@ header .fa-bars {
             </div>
           </div>
         </div>
+    </div>
+
   </div>
+  
+<!-- footer awal -->
 
 <section class="footer">
-  <div class="box-container">
+<div class="box-container">
     <div class="box">
-      <h3>Quick Link</h3>
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#products">products</a>
+        <h3>Quick Link</h3>
+        <a href="#home" >home</a>
+        <a href="#about" >about</a>
+        <a href="#products" >products</a>
     </div>
 
-        <div class="box">
-          <h3>Sosial Media</h3>
-          <a href="https://www.instagram.com/zxayn12/"
-            ><i class="fab fa-instagram"></i> @zxayn12</a
-          >
-          <a href="https://github.com/zxayn"
-            ><i class="fab fa-github"></i> Jidan!!</a
-          >
-        </div>
+    <div class="box">
+        <h3>Sosial Media</h3>
+        <a href="https://www.instagram.com/zxayn12/"><i class="fab fa-instagram"></i> @zxayn12</a>
+        <a href="https://github.com/zxayn"><i class="fab fa-github"></i> Jidan!!</a>
+    </div>
 
-      <div class="box">
-          <h3>Have a Questions?</h3>
-          <a href="#"
-            ><i class="fas fa-map-marker-alt"></i> Kediri, East Java,
-            Indonesia</a
-          >
-          <a
-            href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRsqXpxvrLdZhkqmBcqHMCTgcrjDjnpgqWqbxqLXbTRtvGCWWzJlxMKjXrVKNSNlnhFckxl"
-          >
+    <div class="box">
+        <h3>Have a Questions?</h3>
+        <a href="#" ><i class="fas fa-map-marker-alt"></i> Kediri, East Java, Indonesia</a>
+        <a href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRsqXpxvrLdZhkqmBcqHMCTgcrjDjnpgqWqbxqLXbTRtvGCWWzJlxMKjXrVKNSNlnhFckxl">
             <i class="far fa-envelope"></i> zidanxjr8@gmail.com
-          </a>
-      </div>
+        </a>
     </div>
 
-      <div class="credit">
-        create by <span>Agrimirai web designer</span> | all rights reserved.
-      </div>
-    </section>
 </div>
+
+    <div class="credit"> create by <span>Agrimirai web designer</span> | all rights reserved.</div>
+    
+</section>
+
+<!-- footer akhir --> 
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
