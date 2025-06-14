@@ -942,60 +942,12 @@ header .fa-bars {
       <a href="https://github.com/zxayn"><i class="fab fa-github"></i> Jidan!!</a>
     </div>
 
-<<<<<<< HEAD
     <div class="box">
       <h3>Have a Questions?</h3>
       <a href="#" ><i class="fas fa-map-marker-alt"></i> Kediri, East Java, Indonesia</a>
       <a href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRsqXpxvrLdZhkqmBcqHMCTgcrjDjnpgqWqbxqLXbTRtvGCWWzJlxMKjXrVKNSNlnhFckxl">
         <i class="far fa-envelope"></i> zidanxjr8@gmail.com
       </a>
-=======
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="ppk/pakcoy 68.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Benih Sawi Pakcoy 250s</h6>
-              <p class="card-text">Rp 6.800</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="ppk/selada 68.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Benih Selada 300s</h6>
-              <p class="card-text">Rp 6.800</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="ppk/selada merah 58.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Benih Selada Merah 100s</h6>
-              <p class="card-text">Rp 5.800</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card">
-            <div class="offer-badge">ON OFFER</div>
-            <div class="cart-icon">&#128722;</div>
-            <img src="ppk/tomat 58.jpg" class="card-img-top" alt="Fresh Onion" />
-            <div class="card-body">
-              <h6 class="card-title">Benih Tomat 50s</h6>
-              <p class="card-text">Rp 5.800</p>
-            </div>
-          </div>
-        </div>
-      </div>
->>>>>>> 0008765dbc937e6da8d5924cfb03c3ed3be47619
     </div>
 
   </div>
