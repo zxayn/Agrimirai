@@ -432,7 +432,7 @@ body {
             <div class="row">
                 <!-- Left Column -->
                 <div class="col-md-6 d-flex flex-column justify-content-center align-items-start ps-md-5 mb-4">
-                    <h2 class="faq-title" style="font-weight: bold;">Frequently Asked<br>Questions</h2><br>
+                    <h2 class="faq-title" style="font-weight: bold; font-size:24px;">Frequently Asked<br>Questions</h2><br>
                     <p>Temukan jawaban atas pertanyaan umum yang sering ditanyakan. Kami ingin memastikan Anda mendapatkan informasi yang jelas dan cepat tanpa kesulitan.</p>
                 </div>
 
@@ -443,12 +443,12 @@ body {
                     <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" style="font-size: 16px;">
-                        How long does it take to create an article?
+                        Bisakah saya membeli dalam jumlah besar untuk keperluan kelompok tani atau komunitas?
                         </button>
                     </h2>
                     <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
+                        Bisa, Anda bisa melakukan pembelian skala besar untuk komunitas atau kelompok tani
                         </div>
                     </div>
                     </div>
@@ -456,12 +456,12 @@ body {
                     <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="font-size: 16px;">
-                        How much does it cost for a consultation on SEO?
+                        Apakah kalian melayani pengiriman ke seluruh Indonesia?
                         </button>
                     </h2>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                        Consultation pricing depends on the package and service type.
+                        Ya, kami bisa melayani pengiriman seluruh Indonesia.
                         </div>
                     </div>
                     </div>
@@ -469,12 +469,12 @@ body {
                     <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="font-size: 16px;">
-                        What payment methods are available?
+                        Pembayaran apa saja yang tersedia?
                         </button>
                     </h2>
                     <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                        We accept credit cards, PayPal, and bank transfers.
+                        Kami menerima pembayaran via Gopay, OVO, DANA, Bank Mandiri, Bank BCA, Bank BRI.
                         </div>
                     </div>
                     </div>
@@ -493,12 +493,12 @@ body {
     <!-- Info Section -->
 
     <div class="col-md-6">
-        <h3 class="fw-bold">Ask Us Anything</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
+        <h3 class="fw-bold" style="font-size:24px;">Ask Us Anything</h3><br>
+            <p>Kami siap membantu Anda. Jangan ragu untuk menghubungi kami jika ada pertanyaan, saran, atau kebutuhan informasi lebih lanjut.</p>
         <div class="contact-info">
-            <p><i class="fas fa-map-marker-alt"></i> 918 Abner Road, Hudson</p>
-            <p><i class="fas fa-envelope"></i> example@gmail.com</p>
-            <p><i class="fas fa-phone"></i> +1234 097 890</p>
+            <p><i class="fas fa-map-marker-alt"></i>Perum Griya Intan Permai Blok i No.15</p>
+            <p><i class="fas fa-envelope"></i>agrimirai17@gmail.com</p>
+            <p><i class="fas fa-phone"></i>+628231452412</p>
         </div>
     </div>
 
@@ -563,7 +563,7 @@ body {
         <h3>Have a Questions?</h3>
         <a href="#" ><i class="fas fa-map-marker-alt"></i> Kediri, East Java, Indonesia</a>
         <a href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRsqXpxvrLdZhkqmBcqHMCTgcrjDjnpgqWqbxqLXbTRtvGCWWzJlxMKjXrVKNSNlnhFckxl">
-            <i class="far fa-envelope"></i> zidanxjr8@gmail.com
+            <i class="far fa-envelope"></i> agrimirai17.com
         </a>
     </div>
 
@@ -573,7 +573,7 @@ body {
     
 </section>
 
-<!-- footer akhir  arif bawok-->
+<!-- footer akhir-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
