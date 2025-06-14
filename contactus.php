@@ -584,7 +584,5 @@ body {
 </section>
 
 <!-- footer akhir -->
-
-        <!--Yaaa-->
 </body>
 </html>
