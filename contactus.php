@@ -583,7 +583,7 @@ body {
     
 </section>
 
-<!-- footer akhir asep racing bawok -->
+<!-- footer akhir  -->
 
 </body>
 </html>
