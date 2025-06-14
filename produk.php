@@ -572,7 +572,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Terong</h6>
             <p class="card-text">Rp 13.000 (kg)</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=terong" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
