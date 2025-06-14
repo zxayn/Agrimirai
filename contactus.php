@@ -183,6 +183,11 @@ body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     padding-left: 3rem;
+    font-size: 14px;
+}
+
+#form {
+    font-size: 14px;
 }
 
 .contact-section {
@@ -290,22 +295,6 @@ body {
 .footer .credit span {
     color: var(--main-color);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
@@ -431,7 +420,7 @@ body {
         <h1>Contact Us</h1>
         <svg class="wave" viewBox="0 0 1440 100">
         <path fill="none" stroke="#ffffff" stroke-width="4" d="M0,50 C360,0 1080,100 1440,50" /></svg>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            <p>Selamat Datang di Contact Us AgriMirai</p>
     </div>
 </div>
 
@@ -442,9 +431,9 @@ body {
         <div class="container py-5">
             <div class="row">
                 <!-- Left Column -->
-                <div class="col-md-6 ps-md-4 mb-5">
-                    <h2 class="faq-title" style="font-weight: bold;">Frequently Asked<br>Questions</h2>
-                    <p>Lorem ipsum dolor sit amet, cons ectetur adipis cing elit. Etiam ullam corper risus nec porttitor rhoncus. Etiam dolor arcu.</p>
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-start ps-md-5 mb-4">
+                    <h2 class="faq-title" style="font-weight: bold;">Frequently Asked<br>Questions</h2><br>
+                    <p>Temukan jawaban atas pertanyaan umum yang sering ditanyakan. Kami ingin memastikan Anda mendapatkan informasi yang jelas dan cepat tanpa kesulitan.</p>
                 </div>
 
                 <!-- Right Column -->
@@ -453,7 +442,7 @@ body {
                     <!-- Item 1 -->
                     <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" style="font-size: 16px;">
                         How long does it take to create an article?
                         </button>
                     </h2>
@@ -466,7 +455,7 @@ body {
                     <!-- Item 2 -->
                     <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="font-size: 16px;">
                         How much does it cost for a consultation on SEO?
                         </button>
                     </h2>
@@ -479,7 +468,7 @@ body {
                     <!-- Item 3 -->
                     <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="font-size: 16px;">
                         What payment methods are available?
                         </button>
                     </h2>
@@ -497,47 +486,49 @@ body {
     <!--FAQ end-->
 
 <!-- Form -->
-
-<div class="container contact-section">
+<section id="form">
+    <div class="container contact-section">
     <div class="row align-items-center">
 
-<!-- Info Section -->
+    <!-- Info Section -->
 
-<div class="col-md-6 d-flex flex-column justify-content-center align-items-start ps-md-5 mb-4">
-    <h3 class="fw-bold">Ask Us Anything</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
-    <div class="contact-info">
-        <p><i class="fas fa-map-marker-alt"></i> 918 Abner Road, Hudson</p>
-        <p><i class="fas fa-envelope"></i> example@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +1234 097 890</p>
-    </div>
-</div>
-
-<!-- Form Section -->
-
-<div class="col-md-6">
-    <div class="contact-box">
-<form>
-    <div class="row">
-        <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="First Name">
-        </div>
-        <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Last Name">
+    <div class="col-md-6">
+        <h3 class="fw-bold">Ask Us Anything</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> 918 Abner Road, Hudson</p>
+            <p><i class="fas fa-envelope"></i> example@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +1234 097 890</p>
         </div>
     </div>
-        <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Email">
-        </div>
-        <div class="mb-3">
-            <textarea class="form-control" rows="4" placeholder="Message"></textarea>
-        </div>
-        <button type="submit" class="btn mt-2">Send Message</button>
-</form>
-        </div>
+
+    <!-- Form Section -->
+
+    <div class="col-md-6 ps-md-5 mb-4">
+        <div class="contact-box">
+    <form>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="First Name">
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Last Name">
             </div>
         </div>
-    </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn mt-2">Send Message</button>
+    </form>
+            </div>
+                </div>
+            </div>
+        </div>
+</section>
+
 
 <!-- Form End -->
 
