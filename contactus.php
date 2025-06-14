@@ -583,7 +583,7 @@ body {
     
 </section>
 
-<!-- footer akhir -->
+
 
 </body>
 </html>
