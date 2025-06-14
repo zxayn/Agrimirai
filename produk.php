@@ -572,7 +572,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Terong</h6>
             <p class="card-text">Rp 13.000 (kg)</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=terong" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -643,7 +643,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Anggur</h6>
             <p class="card-text">Rp 60.000 (kg)</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=anggur" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -655,7 +655,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Stroberi</h6>
             <p class="card-text">Rp 80.000 (kg)</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=stroberi" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -667,7 +667,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Buah Naga</h6>
             <p class="card-text">Rp 30.000 (kg)</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=buah_naga" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -679,7 +679,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Melon</h6>
             <p class="card-text">Rp 20.000 (kg)</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=melon" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -758,7 +758,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Beras</h6>
             <p class="card-text">Rp 14.000 (kg)</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=beras" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -770,7 +770,7 @@ header .fa-bars {
                 <div class="card-body">
                   <h6 class="card-title">Gandum</h6>
                   <p class="card-text">Rp 12.000 (kg)</p>
-                  <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a><a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+                  <a href="buy.php?product=gandum" class="btn btn-primary mt-2">Beli Sekarang</a>
                 </div>
           </div>
         </div>
@@ -782,7 +782,7 @@ header .fa-bars {
                     <div class="card-body">
                       <h6 class="card-title">Bawang Merah</h6>
                       <p class="card-text">Rp 41.300 (kg)</p>
-                      <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a><a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+                      <a href="buy.php?product=bawang_merah" class="btn btn-primary mt-2">Beli Sekarang</a>
                     </div>
             </div>
           </div>
@@ -794,7 +794,7 @@ header .fa-bars {
                     <div class="card-body">
                       <h6 class="card-title">Bawang Putih</h6>
                       <p class="card-text">Rp 41.100 (kg)</p>
-                      <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a><a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+                      <a href="buy.php?product=bawang_putih" class="btn btn-primary mt-2">Beli Sekarang</a>
                     </div>
               </div>
             </div>
@@ -816,7 +816,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Pupuk Organik Kohe 2L</h6>
             <p class="card-text">Rp 10.000</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a><a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=pupuk_kohe_2l" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -828,7 +828,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Pupuk Organik Cair Infarm</h6>
             <p class="card-text">Rp 20.000</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a><a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=pupuk_infarm" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -840,7 +840,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Pupuk Penunjang Tunas 500ml</h6>
             <p class="card-text">Rp 42.000</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a><a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=pupuk_tunas" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -852,7 +852,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Pupuk Padi POC Booster 1L</h6>
             <p class="card-text">Rp 80.000</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a><a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=pupuk_padi_booster" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -874,7 +874,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Bibit Selada Hijau 300s</h6>
             <p class="card-text">Rp 6.800</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=bibit_selada_hijau" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -886,7 +886,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Bibit Tomat 50s</h6>
             <p class="card-text">Rp 5.800</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=bibit_tomat" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -898,7 +898,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Bibit Selada Merah 100s</h6>
             <p class="card-text">Rp 5.800</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=bibit_selada_merah" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -910,7 +910,7 @@ header .fa-bars {
           <div class="card-body">
             <h6 class="card-title">Bibit Sawi Pakcoy 250s</h6>
             <p class="card-text">Rp 6.800</p>
-            <a href="buy.php?product=wortel" class="btn btn-primary mt-2">Beli Sekarang</a>
+            <a href="buy.php?product=bibit_pakcoy" class="btn btn-primary mt-2">Beli Sekarang</a>
           </div>
         </div>
       </div>
@@ -942,12 +942,60 @@ header .fa-bars {
       <a href="https://github.com/zxayn"><i class="fab fa-github"></i> Jidan!!</a>
     </div>
 
+<<<<<<< HEAD
     <div class="box">
       <h3>Have a Questions?</h3>
       <a href="#" ><i class="fas fa-map-marker-alt"></i> Kediri, East Java, Indonesia</a>
       <a href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRsqXpxvrLdZhkqmBcqHMCTgcrjDjnpgqWqbxqLXbTRtvGCWWzJlxMKjXrVKNSNlnhFckxl">
         <i class="far fa-envelope"></i> zidanxjr8@gmail.com
       </a>
+=======
+        <div class="col">
+          <div class="card product-card">
+            <div class="offer-badge">ON OFFER</div>
+            <div class="cart-icon">&#128722;</div>
+            <img src="ppk/pakcoy 68.jpg" class="card-img-top" alt="Fresh Onion" />
+            <div class="card-body">
+              <h6 class="card-title">Benih Sawi Pakcoy 250s</h6>
+              <p class="card-text">Rp 6.800</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card product-card">
+            <div class="offer-badge">ON OFFER</div>
+            <div class="cart-icon">&#128722;</div>
+            <img src="ppk/selada 68.jpg" class="card-img-top" alt="Fresh Onion" />
+            <div class="card-body">
+              <h6 class="card-title">Benih Selada 300s</h6>
+              <p class="card-text">Rp 6.800</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card product-card">
+            <div class="offer-badge">ON OFFER</div>
+            <div class="cart-icon">&#128722;</div>
+            <img src="ppk/selada merah 58.jpg" class="card-img-top" alt="Fresh Onion" />
+            <div class="card-body">
+              <h6 class="card-title">Benih Selada Merah 100s</h6>
+              <p class="card-text">Rp 5.800</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card product-card">
+            <div class="offer-badge">ON OFFER</div>
+            <div class="cart-icon">&#128722;</div>
+            <img src="ppk/tomat 58.jpg" class="card-img-top" alt="Fresh Onion" />
+            <div class="card-body">
+              <h6 class="card-title">Benih Tomat 50s</h6>
+              <p class="card-text">Rp 5.800</p>
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> 0008765dbc937e6da8d5924cfb03c3ed3be47619
     </div>
 
   </div>
