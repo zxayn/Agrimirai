@@ -387,7 +387,7 @@ body {
           <input type="tel" class="form-control form-control-lg" id="telepon" name="telepon" placeholder="Contoh: 08123456789" value="<?= $_POST['telepon'] ?? '' ?>" style="font-size: 1.5rem;">
         </div>
 
-        <!-- Status -->
+        <!-- Statuss -->
         <div class="mb-3">
           <label for="Status" class="form-label" style="font-size: 1.5rem;">Status</label>
           <select class="form-select form-select-lg" id="Status" name="Status" style="font-size: 1.5rem;">
