@@ -583,6 +583,7 @@ body {
     
 </section>
 
-<!-- footer akhir -->
+<!-- footer akhir andi bawok -->
+
 </body>
 </html>
