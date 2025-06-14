@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["jenisKelamin"])) $errors[] = "Jenis kelamin belum dipilih.";
   if (empty($_POST["alamat"])) $errors[] = "Alamat belum diisi.";
   if (empty($_POST["telepon"])) $errors[] = "Nomor telepon belum diisi.";
-  if (empty($_POST["kategori"])) $errors[] = "Kategori petani belum dipilih.";
+  if (empty($_POST["Status"])) $errors[] = "Status belum dipilih.";
   if (empty($_POST["email"])) $errors[] = "Email belum diisi.";
   if (empty($_POST["password"])) $errors[] = "Password belum diisi.";
 
@@ -48,12 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $success) {
     $Jenis_Kelamin = $conn->real_escape_string($_POST['jenisKelamin']);
     $Alamat = $conn->real_escape_string($_POST['alamat']);
     $No_Telp = $conn->real_escape_string($_POST['telepon']);
-    $Kategori = $conn->real_escape_string($_POST['kategori']);
+    $Status = $conn->real_escape_string($_POST['Status']);
     $Email = $conn->real_escape_string($_POST['email']);
     $Password =$conn->real_escape_string($_POST['password']);
 
     // Query untuk menyimpan data
-    $sql = "INSERT INTO registrasi (Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, No_Telp, Kategori_Petani, Email, Password) VALUES ('$Nama', '$Tanggal_Lahir', '$Jenis_Kelamin', '$Alamat', '$No_Telp', '$Kategori', '$Email', '$Password')";
+    $sql = "INSERT INTO registrasi (Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, No_Telp, Status, Email, Password) VALUES ('$Nama', '$Tanggal_Lahir', '$Jenis_Kelamin', '$Alamat', '$No_Telp', '$Status', '$Email', '$Password')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Data berhasil disimpan.";
@@ -387,14 +387,13 @@ body {
           <input type="tel" class="form-control form-control-lg" id="telepon" name="telepon" placeholder="Contoh: 08123456789" value="<?= $_POST['telepon'] ?? '' ?>" style="font-size: 1.5rem;">
         </div>
 
-        <!-- Kategori Petani -->
+        <!-- Status -->
         <div class="mb-3">
-          <label for="kategori" class="form-label" style="font-size: 1.5rem;">Kategori Petani</label>
-          <select class="form-select form-select-lg" id="kategori" name="kategori" style="font-size: 1.5rem;">
+          <label for="Status" class="form-label" style="font-size: 1.5rem;">Status</label>
+          <select class="form-select form-select-lg" id="Status" name="Status" style="font-size: 1.5rem;">
             <option selected disabled>Pilih kategori</option>
-            <option value="sayur" <?= ($_POST['kategori'] ?? '') == 'sayur' ? 'selected' : '' ?>>Petani Sayur</option>
-            <option value="buah" <?= ($_POST['kategori'] ?? '') == 'buah' ? 'selected' : '' ?>>Petani Buah</option>
-            <option value="padi" <?= ($_POST['kategori'] ?? '') == 'padi' ? 'selected' : '' ?>>Petani Padi</option>
+            <option value="petani" <?= ($_POST['Status'] ?? '') == 'petani' ? 'selected' : '' ?>>Petani</option>
+            <option value="mitra" <?= ($_POST['Status'] ?? '') == 'mitra' ? 'selected' : '' ?>>Mitra</option>
           </select>
         </div>
 
