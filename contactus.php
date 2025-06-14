@@ -182,6 +182,7 @@ body {
 #faqu {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    padding-left: 3rem;
 }
 
 .contact-section {
@@ -437,65 +438,63 @@ body {
 <!-- jumbotron end -->
 
 <!--FAQ-->
+    <section id="faqu">
+        <div class="container py-5">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-md-6 ps-md-4 mb-5">
+                    <h2 class="faq-title" style="font-weight: bold;">Frequently Asked<br>Questions</h2>
+                    <p>Lorem ipsum dolor sit amet, cons ectetur adipis cing elit. Etiam ullam corper risus nec porttitor rhoncus. Etiam dolor arcu.</p>
+                </div>
 
-<section id="faqu">
-    <div class="container py-5">
-        <div class="row">
-
-<!-- Left Column -->
-
-        <div class="col-md-6 ps-md-4 mb-5">
-            <h2 class="faq-title" style="font-weight: bold;">Frequently Asked<br>Questions</h2>
-                <p>Lorem ipsum dolor sit amet, cons ectetur adipis cing elit. Etiam ullam corper risus nec porttitor rhoncus. Etiam dolor arcu.</p>
+                <!-- Right Column -->
+                <div class="col-md-6">
+                    <div class="accordion" id="faqAccordion">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                        How long does it take to create an article?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        How much does it cost for a consultation on SEO?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        Consultation pricing depends on the package and service type.
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        What payment methods are available?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        We accept credit cards, PayPal, and bank transfers.
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
-
-<!-- Right Column -->
-
-<div class="col-md-6">
-    <div class="accordion" id="faqAccordion">
-
-<!-- Item 1 -->
-
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">How long does it take to create an article?
-            </button>
-        </h2>
-    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
-        </div>
-    </div>
-</div>
-
-<!-- Item 2 -->
-
-<div class="accordion-item">
-    <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How much does it cost for a consultation on SEO?
-        </button>
-    </h2>
-    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">Consultation pricing depends on the package and service type.</div>
-    </div>
-</div>
-
-<!-- Item 3 -->
-
-<div class="accordion-item">
-    <h2 class="accordion-header">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What payment methods are available?
-    </button>
-    </h2>
-        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">We accept credit cards, PayPal, and bank transfers.</div>
-        </div>
-    </div>
-</div>
-</div>
-
-</section>
-
-<!--FAQ end-->
+    </section>
+    <!--FAQ end-->
 
 <!-- Form -->
 
@@ -584,6 +583,8 @@ body {
 </section>
 
 <!-- footer akhir  arif bawok-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>
