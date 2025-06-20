@@ -1,3 +1,14 @@
+<?php
+session_start();
+include 'databases.php';
+
+// Inisialisasi variabel default jika belum login
+$loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+$nama = $loggedIn ? $_SESSION['user_nama'] : 'Pengembara';
+$email = $loggedIn ? $_SESSION['user_email'] : '';
+$role = $loggedIn ? $_SESSION['user_role'] : '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -553,25 +564,33 @@
       <a href="contactus.php" class="fas fa-user"></a>
       <a href="produk.php" class="fas fa-shopping-cart"></a>
 
-      <div class="profile-dropdown" style="padding-left: 1rem;">
-        <a href="#" class="fas fa-user-circle" id="profile-icon"></a>
-        <div class="profile-menu" id="profile-menu">
-          <a href="profile.php">My Profile</a>
-          <a href="logout.php">Logout</a>
-        </div>
+    <?php if ($loggedIn): ?>
+    <div class="profile-dropdown" style="padding-left: 1rem;">
+      <a href="#" class="fas fa-user-circle" id="profile-icon"></a>
+      <div class="profile-menu" id="profile-menu">
+        <a href="profile.php">My Profile</a>
+        <?php if ($loggedIn && $role === 'Mitra'): ?>
+        <a href="pengajuan.php" class="btn">Pengajuan</a>
+        <a href="mitra.php" class="btn">cek acc</a>
+        <?php endif; ?>
+        <a href="logout.php">Logout</a>
+      </div>
+    </div>
+<?php else: ?>
+  <a href="login.php" class="fas fa-sign-in-alt" title="Login"></a>
+<?php endif; ?>
+
       </div>
     </div>
   </header>
 
   <section class="home" id="home">
-
     <div class="content">
-      <h3>Welcome to Agrimirai</h3>
+      <h3>Welcome to Agrimirai, <?php echo htmlspecialchars($nama); ?>!</h3>
       <span>Your one-stop solution for all agricultural needs.</span>
       <p>Explore our services and products designed to enhance your agricultural experience.</p>
       <a href="#about" class="btn"> Learn More</a>
     </div>
-
   </section>
 
 
@@ -628,39 +647,41 @@
 
   </section>
 
+<section class="products" id="products">
 
-  <section class="products" id="products">
+  <h1 class="heading"> <span>Products</span> Sales </h1>
+  <div class="box-container">
 
-    <h1 class="heading"> <span>Products</span> Sales </h1>
-    <div class="box-container">
-      <div class="box">
-        <div class="image">
-          <img src="img/selada.png" alt="">
-          <h3>Selada</h3>
-          <p>Selada hidroponik adalah metode budidaya selada tanpa tanah, menggunakan media air yang kaya nutrisi.</p>
-          <a href="login.php" class="btn">Buy Now</a>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="image">
-          <img src="img/tomato.png" alt="">
-          <h3>Tomat</h3>
-          <p>Tomat organik ditanam tanpa pestisida kimia, memberikan rasa segar dan sehat.</p>
-          <a href="login.php" class="btn">Buy Now</a>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="image">
-          <img src="img/kubis.png" alt="">
-          <h3>Kubis</h3>
-          <p>Kubis segar dengan daun renyah, cocok untuk berbagai olahan masakan sehat dan bergizi.</p>
-          <a href="login.php" class="btn">Buy Now</a>
-        </div>
+    <div class="box">
+      <div class="image">
+        <img src="img/selada.png" alt="">
+        <h3>Selada</h3>
+        <p>Selada hidroponik adalah metode budidaya selada tanpa tanah, menggunakan media air yang kaya nutrisi.</p>
+        <a href="<?= isset($_SESSION['loggedin']) && $_SESSION['loggedin'] ? 'produk.php' : 'login.php'; ?>" class="btn">Buy Now</a>
       </div>
     </div>
-  </section>
+
+    <div class="box">
+      <div class="image">
+        <img src="img/tomato.png" alt="">
+        <h3>Tomat</h3>
+        <p>Tomat organik ditanam tanpa pestisida kimia, memberikan rasa segar dan sehat.</p>
+        <a href="<?= isset($_SESSION['loggedin']) && $_SESSION['loggedin'] ? 'produk.php' : 'login.php'; ?>" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+        <img src="img/kubis.png" alt="">
+        <h3>Kubis</h3>
+        <p>Kubis segar dengan daun renyah, cocok untuk berbagai olahan masakan sehat dan bergizi.</p>
+        <a href="<?= isset($_SESSION['loggedin']) && $_SESSION['loggedin'] ? 'produk.php' : 'login.php'; ?>" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
   
   <section class="footer">
     <div class="box-container">

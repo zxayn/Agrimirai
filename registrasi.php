@@ -1,4 +1,6 @@
 <?php
+include 'databases.php';
+
 $errors = [];
 $success = false;
 
@@ -31,15 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Contoh: simpanData($_POST['nama'], ...);
   }
 }
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "agrimirai";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
 echo" Koneksi berhasil";
 // Jika form berhasil disubmit, simpan data ke database
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $success) {
@@ -51,6 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $success) {
     $Status = $conn->real_escape_string($_POST['Status']);
     $Email = $conn->real_escape_string($_POST['email']);
     $Password =$conn->real_escape_string($_POST['password']);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
 
     // Query untuk menyimpan data
     $sql = "INSERT INTO registrasi (Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, No_Telp, Status, Email, Password) VALUES ('$Nama', '$Tanggal_Lahir', '$Jenis_Kelamin', '$Alamat', '$No_Telp', '$Status', '$Email', '$Password')";

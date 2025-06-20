@@ -1,4 +1,6 @@
 <?php
+session_start(); // Wajib untuk session
+include 'databases.php'; // Pastikan file databases.php ada di direktori yang sama
 $errors = [];
 $success = false;
 
@@ -14,17 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 
-//databases
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "agrimirai";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
-echo" Koneksi berhasil";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) {
   $email = $_POST['email'] ?? '';
   $password = $_POST['password'] ?? '';
@@ -34,21 +25,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) {
     $errors[] = "Email dan Password harus diisi.";
   } else {
     // Cek kredensial di database
-    $stmt = $conn->prepare("SELECT * FROM registrasi WHERE email = ? AND password = ?");
-    $stmt->bind_param("ss", $email, $password);
+    $stmt = $conn->prepare("SELECT * FROM registrasi WHERE email = ?&& password = ?");
+    $stmt->bind_param("ss", $email,$password);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-      // Login berhasil
-      $success = true;
+          $user = $result->fetch_assoc();
+          $_SESSION['loggedin'] = true;
+          $_SESSION['user_nama'] = $user['nama'];
+          $_SESSION['user_email'] = $user['email'];
+          $_SESSION['user_role'] = $user['status'];
+          $_SESSION['user_telp'] = $user['no_Telp'];
+          $success = true;
     } else {
       $errors[] = "Email atau Password salah.";
     }
     $stmt->close();
   }
 }
-
 ?>
 <!doctype html>
 <html lang="id">
@@ -545,7 +540,7 @@ Swal.fire({
   confirmButtonText: 'OK',
   confirmButtonColor: '#19735d'
 }).then(() => {
-  window.location.href = "produk.php"; // Ganti jika ingin redirect ke halaman lain
+  window.location.href = "index.php"; // Ganti jika ingin redirect ke halaman lain
 });
 </script>
 <?php endif; ?>
