@@ -576,9 +576,9 @@ $role = $loggedIn ? $_SESSION['user_role'] : '';
         <a href="logout.php">Logout</a>
       </div>
     </div>
-<?php else: ?>
-  <a href="login.php" class="fas fa-sign-in-alt" title="Login"></a>
-<?php endif; ?>
+    <?php else: ?>
+      <a href="login.php" class="fas fa-sign-in-alt" title="Login"></a>
+  <?php endif; ?>
 
       </div>
     </div>
