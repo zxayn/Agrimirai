@@ -1,3 +1,22 @@
+<?php
+session_start();
+include 'databases.php';
+
+// Inisialisasi variabel default jika belum login
+$loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+$nama = $loggedIn ? $_SESSION['user_nama'] : 'Pengembara';
+$email = $loggedIn ? $_SESSION['user_email'] : '';
+$role = $loggedIn ? $_SESSION['user_role'] : '';
+
+if (isset($_SESSION['pesan'])) {
+    echo "<script>alert('" . $_SESSION['pesan'] . "');</script>";
+    unset($_SESSION['pesan']);
+}
+
+
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -296,6 +315,51 @@ body {
     color: var(--main-color);
 }
 
+
+    .profile-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .profile-menu {
+        display: none;
+        position: absolute;
+        background-color: var(--main-color);
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        right: 0;
+        top: 100%;
+        border-radius: 10px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .profile-dropdown #profile-icon {
+        font-size: 3.7rem;
+    }
+
+    .profile-menu a {
+        color: black;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-menu a:hover {
+        background-color: var(--main-color);
+    }
+
+    .profile-menu.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 /* Responsive Adjustments */
 @media (max-width: 991px) {
     html {
@@ -407,6 +471,22 @@ body {
     <a href="contactus.php" class="fas fa-user"></a>
     <a href="produk.php" class="fas fa-shopping-cart"></a>
 
+<?php if ($loggedIn): ?>
+<div class="profile-dropdown" style="padding-left: 1rem;">
+    <a href="#" class="fas fa-user-circle" id="profile-icon"></a>
+        <div class="profile-menu" id="profile-menu">
+            <a href="profile.php">My Profile</a>
+            <?php if ($loggedIn && $role === 'Mitra'): ?>
+            <a href="pengajuan.php" class="btn">Pengajuan</a>
+            <a href="mitra.php" class="btn">cek acc</a>
+            <?php endif; ?>
+            <a href="logout.php">Logout</a>
+    </div>
+</div>
+    <?php else: ?>
+        <a href="login.php" class="fas fa-sign-in-alt" title="Login"></a>
+<?php endif; ?>
+
 </div>
 
 </header>
@@ -442,11 +522,11 @@ body {
                     <!-- Item 1 -->
                     <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" style="font-size: 16px;">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" style="font-size: 16px;">
                         Bisakah saya membeli dalam jumlah besar untuk keperluan kelompok tani atau komunitas?
                         </button>
                     </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
                         Bisa, Anda bisa melakukan pembelian skala besar untuk komunitas atau kelompok tani
                         </div>
@@ -506,20 +586,20 @@ body {
 
     <div class="col-md-6 ps-md-5 mb-4">
         <div class="contact-box">
-    <form>
+    <form  action="prosespesan.php" method="POST">
         <div class="row">
             <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" placeholder="First Name">
+                <input type="text" name="firstname" class="form-control" value="<?= htmlspecialchars($nama) ?>" readonly>
             </div>
             <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" placeholder="Last Name">
+                <input type="text" name="lastname" class="form-control" placeholder="Last Name">
             </div>
         </div>
             <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" name="email" class="form-control" value="<?= htmlspecialchars($email) ?>" readonly>
             </div>
             <div class="mb-3">
-                <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+                <textarea name="pesan" class="form-control" rows="4" placeholder="Message"></textarea>
             </div>
             <button type="submit" class="btn mt-2">Send Message</button>
     </form>
@@ -548,9 +628,9 @@ body {
 <div class="box-container">
     <div class="box">
         <h3>Quick Link</h3>
-        <a href="#home" >home</a>
-        <a href="#about" >about</a>
-        <a href="#products" >products</a>
+        <a href="index.php" >home</a>
+        <a href="#" >about</a>
+        <a href="produk.php" >products</a>
     </div>
 
     <div class="box">
@@ -576,6 +656,31 @@ body {
 <!-- footer akhir-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Script -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const profileIcon = document.getElementById('profile-icon');
+    const profileMenu = document.getElementById('profile-menu');
+
+    if (profileIcon && profileMenu) {
+        profileIcon.addEventListener('click', function(event) {
+            event.preventDefault();
+        profileMenu.classList.toggle('show');
+    });
+
+        window.addEventListener('click', function(event) {
+            if (!profileIcon.contains(event.target) && !profileMenu.contains(event.target)) {
+                if (profileMenu.classList.contains('show')) {
+                profileMenu.classList.remove('show');
+                }
+            }
+        });
+    }
+});
+</script>
+
+<!-- Script -->
 
 </body>
 </html>

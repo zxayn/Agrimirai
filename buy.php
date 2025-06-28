@@ -22,6 +22,30 @@ if ($result->num_rows === 0) {
 }
 
 $current_product = $result->fetch_assoc();
+
+//transaksi save
+$slug = $_GET['product'] ?? 'wortel';
+$stmt = $conn->prepare("SELECT * FROM produk_detail WHERE slug = ?");
+$stmt->bind_param("s", $slug);
+$stmt->execute();
+$result = $stmt->get_result();
+if ($result->num_rows === 0) {
+    die("Produk tidak ditemukan.");
+}
+$current_product = $result->fetch_assoc();
+
+// Proses saat tombol "Selesaikan Transaksi" ditekan
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['jumlah'])) {
+    $user_name = $_SESSION['user_nama'] ?? 'Guest';
+    $jumlah = (int) $_POST['jumlah'];
+    $harga = (int) preg_replace('/[^0-9]/', '', $current_product['price']);
+    $total = $jumlah * $harga;
+
+    // Simpan ke tabel transaksi
+    $insert = $conn->prepare("INSERT INTO transaksi (user_name, slug, nama_produk, jumlah, total) VALUES (?, ?, ?, ?, ?)");
+    $insert->bind_param("sssii", $user_name, $slug, $current_product['name'], $jumlah, $total);
+    $insert->execute();}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -635,11 +659,33 @@ header .fa-bars {
             <h5 class="text-success"><?= htmlspecialchars($current_product['price']) ?></h5>
             <p class="text-muted"><?= $current_product['description'] ?></p>
 
-            <form action="add_to_cart.php" method="post" class="d-flex mb-3">
-              <input type="hidden" name="slug" value="<?= htmlspecialchars($slug) ?>">
-              <input type="number" class="form-control w-25 me-2" name="jumlah" value="1" min="1" max="<?= $current_product['stok'] ?>" />
-              <button type="submit" class="btn btn-success">Add to Cart</button>
+            <form id="checkoutForm" method="post" action="" class="d-flex mb-3">
+              <input type="number" class="form-control w-25 me-2" id="jumlah" name="jumlah" value="1" min="1" max="<?= $current_product['stok'] ?>" />
+              <button type="button" class="btn btn-success" id="beliBtn">Beli sekarang</button>
             </form>
+              <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="checkoutModalLabel">Konfirmasi Transaksi</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                    </div>
+
+                    <div class="modal-body">
+                      <p><strong>Nama Pembeli:</strong> <?= htmlspecialchars($_SESSION['user_nama'] ?? 'User') ?></p>
+                      <p><strong>Jumlah Barang:</strong> <span id="modalJumlah">0</span></p>
+                      <p><strong>Total Harga:</strong> <span id="modalTotal">Rp 0</span></p>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                      <button type="submit" class="btn btn-success" form="checkoutForm">Selesaikan Transaksi</button>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
             <p class="text-muted">Stok tersedia: <?= $current_product['stok'] ?> unit</p>
 
             <ul class="nav nav-tabs" id="productTab" role="tablist">
@@ -709,5 +755,19 @@ header .fa-bars {
       }
     });
 </script>
+<script>
+  document.getElementById('beliBtn').addEventListener('click', function () {
+    const jumlah = parseInt(document.getElementById('jumlah').value);
+    const harga = <?= (int) preg_replace('/[^0-9]/', '', $current_product['price']) ?>;
+    const total = jumlah * harga;
+
+    document.getElementById('modalJumlah').textContent = jumlah;
+    document.getElementById('modalTotal').textContent = 'Rp ' + total.toLocaleString('id-ID');
+
+    const modal = new bootstrap.Modal(document.getElementById('checkoutModal'));
+    modal.show();
+  });
+</script>
+
   </body>
 </html>

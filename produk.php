@@ -1,3 +1,15 @@
+<?php
+session_start();
+include 'databases.php';
+
+// Inisialisasi variabel default jika belum login
+$loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+$nama = $loggedIn ? $_SESSION['user_nama'] : 'Pengembara';
+$email = $loggedIn ? $_SESSION['user_email'] : '';
+$role = $loggedIn ? $_SESSION['user_role'] : '';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -283,6 +295,49 @@ header .fa-bars {
     color: var(--main-color);
 }
   
+    .profile-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-menu {
+      display: none;
+      position: absolute;
+      background-color: var(--main-color);
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      right: 0;
+      top: 100%;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .profile-dropdown #profile-icon {
+      font-size: 3.7rem;
+    }
+
+    .profile-menu a {
+      color: black;
+      padding: 12px 20px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      font-size: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-menu a:hover {
+      background-color: var(--main-color);
+    }
+
+    .profile-menu.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
 
 
 
@@ -423,12 +478,28 @@ header .fa-bars {
     <a href="index.php">Products</a>
   </nav>
 
-  <div class="icons">
+<div class="icons">
+      <a href="contactus.php" class="fas fa-user"></a>
+      <a href="produk.php" class="fas fa-shopping-cart"></a>
 
-    <a href="contactus.php" class="fas fa-user"></a>
-    <a href="produk.php" class="fas fa-shopping-cart"></a>
+    <?php if ($loggedIn): ?>
+    <div class="profile-dropdown" style="padding-left: 1rem;">
+      <a href="#" class="fas fa-user-circle" id="profile-icon"></a>
+      <div class="profile-menu" id="profile-menu">
+        <a href="profile.php">My Profile</a>
+        <?php if ($loggedIn && $role === 'Mitra'): ?>
+        <a href="pengajuan.php" class="btn">Pengajuan</a>
+        <a href="mitra.php" class="btn">cek acc</a>
+        <?php endif; ?>
+        <a href="logout.php">Logout</a>
+      </div>
+    </div>
+    <?php else: ?>
+      <a href="login.php" class="fas fa-sign-in-alt" title="Login"></a>
+  <?php endif; ?>
 
-  </div>
+      </div>
+    </div>
 
 </header>
 
@@ -962,5 +1033,29 @@ header .fa-bars {
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const profileIcon = document.getElementById('profile-icon');
+      const profileMenu = document.getElementById('profile-menu');
+
+      // Toggle the profile menu when the icon is clicked
+      if (profileIcon && profileMenu) {
+        profileIcon.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent default link behavior (e.g., jumping to #)
+          profileMenu.classList.toggle('show');
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener('click', function(event) {
+          // Check if the clicked element is NOT the profile icon AND is NOT inside the profile menu
+          if (!profileIcon.contains(event.target) && !profileMenu.contains(event.target)) {
+            if (profileMenu.classList.contains('show')) {
+              profileMenu.classList.remove('show');
+            }
+          }
+        });
+      }
+    });
+  </script>
   </body>
 </html>
